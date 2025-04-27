@@ -1,11 +1,61 @@
-# HELPInternational
-Repository of the HELP International Database 
-Clustering the Countries by using Unsupervised Learning for HELP International
-Objective:
-To categorise the countries using socio-economic and health factors that determine the overall development of the country.
+# 📚 HELP International - Unsupervised Learning Project
 
-About organization:
-HELP International is an international humanitarian NGO that is committed to fighting poverty and providing the people of backward countries with basic amenities and relief during the time of disasters and natural calamities.
+## Project Overview
 
-Problem Statement:
-HELP International have been able to raise around $ 10 million. Now the CEO of the NGO needs to decide how to use this money strategically and effectively. So, CEO has to make decision to choose the countries that are in the direst need of aid. Hence, your Job as a Data scientist is to categorise the countries using some socio-economic and health factors that determine the overall development of the country. Then you need to suggest the countries which the CEO needs to focus on the most.
+HELP International is dedicated to delivering humanitarian aid worldwide. This project uses **unsupervised machine learning** techniques to help HELP International **identify countries with the greatest need** based on socio-economic, health, and development indicators.
+
+Our analysis aims to recommend where resources should be prioritized based on clustering techniques and exploratory data analysis (EDA).
+
+---
+
+## 🛠️ Project Workflow
+
+1. **EDA (Exploratory Data Analysis)**  
+   - Data cleaning and type conversion.
+   - Identification of key variables influencing need (e.g., child mortality, GDP per capita, health expenditures).
+   - Correlation analysis to find relationships between variables.
+
+2. **Feature Engineering**  
+   - Grouped variables into three main categories:
+     - **Health** (child mortality, fertility rate, life expectancy)
+     - **Commerce** (imports, exports)
+     - **Economics** (income, inflation, GDP, health spending)
+   - Created new standardized features for clustering.
+
+3. **Model Training**  
+   - Implemented and compared three clustering models:
+     - **K-Means Clustering**
+     - **DBSCAN Clustering**
+     - **Hierarchical Clustering**
+   
+4. **Model Comparisons**  
+   - Evaluated clustering performance using visualizations (2D and 3D plots, heatmaps).
+   - Identified the most logical groupings for countries in need.
+
+5. **Conclusions and Recommendations**  
+   - **K-Means and Hierarchical Clustering** yielded the most meaningful results.
+   - **Hierarchical Clustering** was more selective and would be recommended if resources are limited.
+   - **K-Means** is recommended for broader resource allocation when more aid is available.
+   - **DBSCAN** was less effective for this particular humanitarian need context.
+
+---
+
+## 📊 Key Results
+
+- 43 countries were identified in the **highest need cluster** using K-Means.
+- Hierarchical clustering provided an even **more focused** list for resource allocation.
+- Examples of key countries: Haiti, Afghanistan, Chad, Sudan.
+
+---
+
+## 🧪 Technologies Used
+
+- **Python**
+- **Pandas**, **NumPy** for data manipulation
+- **Matplotlib**, **Seaborn** for visualizations
+- **Scikit-learn** for machine learning models
+- **SciPy** for hierarchical clustering and statistical testing
+
+---
+
+
